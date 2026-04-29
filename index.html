@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Confani — The complete operating system for professional events. Event management for organizers, audience engagement for speakers, ROI analytics for sponsors, automated networking for attendees." />
+<meta property="og:title" content="Confani — The Operating System for Professional Events" />
+<meta property="og:description" content="Networking, finally measurable. Built for organizers, speakers, sponsors, and the professionals who attend." />
+<meta property="og:image" content="logo_landscape.png" />
+<title>Confani — The Operating System for Professional Events</title>
+<link rel="icon" type="image/png" href="logo_icon.png" />
+<link rel="apple-touch-icon" href="logo_icon.png" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav nav-dark" id="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" data-route="home">
+      <div class="nav-brand-mark"></div>
+      <span>Confani</span>
+    </div>
+
+    <div class="nav-links">
+      <a class="nav-link" data-route="product">Product</a>
+      <a class="nav-link" data-route="for-organizations">For Organizations</a>
+      <a class="nav-link" data-route="for-attendees">For Professionals</a>
+      <a class="nav-link" data-route="pricing">Pricing</a>
+      <a class="nav-link" data-route="company">Company</a>
+    </div>
+
+    <div class="nav-cta-group">
+      <div class="lang-switch" id="langSwitch">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span id="langCurrent">EN</span>
+        <div class="lang-dropdown" id="langDropdown">
+          <div class="lang-option active" data-lang="en"><span class="flag">🇺🇸</span> English</div>
+          <div class="lang-option" data-lang="es"><span class="flag">🇪🇸</span> Español</div>
+          <div class="lang-option" data-lang="fr"><span class="flag">🇫🇷</span> Français</div>
+          <div class="lang-option" data-lang="pt"><span class="flag">🇧🇷</span> Português</div>
+          <div class="lang-option" data-lang="de"><span class="flag">🇩🇪</span> Deutsch</div>
+          <div class="lang-option" data-lang="zh"><span class="flag">🇨🇳</span> 中文</div>
+          <div class="lang-option" data-lang="ja"><span class="flag">🇯🇵</span> 日本語</div>
+          <div class="lang-option" data-lang="ar"><span class="flag">🇸🇦</span> العربية</div>
+          <div class="lang-option" data-lang="hi"><span class="flag">🇮🇳</span> हिन्दी</div>
+          <div class="lang-option" data-lang="ru"><span class="flag">🇷🇺</span> Русский</div>
+        </div>
+      </div>
+      <button class="btn btn-ghost btn-sm" data-route="login">Sign in</button>
+      <button class="btn btn-gradient btn-sm" data-route="signup">
+        Get Confani
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-drawer" id="mobileDrawer">
+    <button class="drawer-close" id="drawerClose" aria-label="Close">×</button>
+    <a class="nav-link" data-route="product">Product</a>
+    <a class="nav-link" data-route="for-organizations">For Organizations</a>
+    <a class="nav-link" data-route="for-attendees">For Professionals</a>
+    <a class="nav-link" data-route="pricing">Pricing</a>
+    <a class="nav-link" data-route="company">Company</a>
+    <div style="margin-top: 2rem; display: flex; gap: 0.75rem;">
+      <button class="btn btn-ghost" data-route="login" style="color: white;">Sign in</button>
+      <button class="btn btn-gradient" data-route="signup">Get Confani</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HOME PAGE
+     ============================================================ -->
+<div class="page active" data-page="home">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-spotlight" id="heroSpotlight"></div>
+    <canvas class="hero-network" id="heroNetwork"></canvas>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-tag">
+      <span class="pulse"></span>
+      <span>Now in private beta · Pre Launch · The Americas & Caribbean </span>
+    </div>
+
+    <h1 class="hero-title hero-headline">
+      <span class="reveal-line"><span>Networking,</span></span>
+      <span class="reveal-line"><span><em>finally</em></span></span>
+      <span class="reveal-line"><span class="gradient-text">measurable.</span></span>
+    </h1>
+
+    <p class="hero-sub">
+      Confani is the complete operating system for professional events — running the show for organizers, automously engaging audiences for speakers, quantifying value for sponsors and turning rooms full of strangers into meaningful connections that move careers all while accurately visualizing event data.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn btn-gradient btn-lg btn-arrow" data-route="signup">
+        Start free
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <button class="btn btn-ghost btn-lg" data-route="for-organizations" style="color: white; border: 1px solid rgba(255,255,255,0.2);">
+        For organizations
+      </button>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">$1.5T</div>
+        <div class="hero-stat-label">Spent annually on business events</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">4</div>
+        <div class="hero-stat-label">Stakeholders unified on one platform</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">10+</div>
+        <div class="hero-stat-label">Languages supported on launch</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">0%</div>
+        <div class="hero-stat-label">Cost for individual professionals</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="section-paper">
+  <div class="container">
+    <div style="max-width: 720px;">
+      <span class="section-eyebrow reveal">The problem we exist to solve</span>
+      <h2 class="section-title reveal" style="margin-top: 1.5rem;">
+        A trillion dollars goes into events every year.<br/>
+        <em>Almost none of it is measured.</em>
+      </h2>
+      <p class="lede reveal" style="margin-top: 2rem;">
+        Traditionally, organizers utilize limited tools. Speakers lose connection with their audience after a session ends. Sponsors write large checks without accurate feedback of what worked at events. Attendees miss the right person two rooms over or even within the same space. Confani instantly rectifies these issues and ties the whole proceess into one platform.
+      </p>
+    </div>
+
+    <div class="stakeholder-grid reveal">
+      <div class="stakeholder-card" data-route="for-organizations">
+        <div class="stakeholder-num">01 — ORGANIZATIONS</div>
+        <div class="stakeholder-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h2M9 13h2M9 17h2M13 9h2M13 13h2M13 17h2"/></svg>
+        </div>
+        <div class="stakeholder-name">Run the event</div>
+        <p class="body-sm">AI-built schedules, multi-rep coordination, intelligent buyer signals and selective information sharing — turning every event into a measurable revenue channel.</p>
+        <a class="stakeholder-link">For organizations</a>
+      </div>
+      <div class="stakeholder-card">
+        <div class="stakeholder-num">02 — SPEAKERS</div>
+        <div class="stakeholder-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg>
+        </div>
+        <div class="stakeholder-name">Engage audiences</div>
+        <p class="body-sm">Seemlessly engage with your audience throughout events. Customize your session space. Stay connected after the talk. Receive valuable insights about your audience's reponse</p>
+        <a class="stakeholder-link">For speakers</a>
+      </div>
+      <div class="stakeholder-card">
+        <div class="stakeholder-num">03 — SPONSORS</div>
+        <div class="stakeholder-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 14l4-4 4 4 6-6"/></svg>
+        </div>
+        <div class="stakeholder-name">Prove ROI</div>
+        <p class="body-sm">Quantifiable engagement, defensible numbers and the kind of post-event reports that turn renewal conversations into easy ones.</p>
+        <a class="stakeholder-link">For sponsors</a>
+      </div>
+      <div class="stakeholder-card" data-route="for-attendees">
+        <div class="stakeholder-num">04 — PROFESSIONALS</div>
+        <div class="stakeholder-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg>
+        </div>
+        <div class="stakeholder-name">Find your people</div>
+        <p class="body-sm"> Know who to approach before you do, more meaningful conversations, lasting connections with companies and professinals that don't fade after the event. Follow-ups with value. </p>
+        <a class="stakeholder-link">For professionals</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI EVENT BUILDER -->
+<section>
+  <div class="container">
+    <div class="feature-split">
+      <div>
+        <span class="section-eyebrow reveal">Signature feature · For organizations</span>
+        <h2 class="section-title reveal" style="margin-top: 1.5rem;">
+          Type the event.<br/>
+          <em>Confani builds it.</em>
+        </h2>
+        <p class="lede reveal" style="margin-top: 2rem; max-width: 50ch;">
+        Describe your event in plain language — typed or spoken. Confani translates it into a structured, publishable event, intelligently organized and ready for your review. The most painful part of event production becomes the easiest.
+        </p>
+        <ul class="reveal" style="margin-top: 2.5rem; display: grid; gap: 1rem;">
+          <li class="flex" style="gap: 0.75rem; align-items: flex-start;">
+            <span style="color: var(--purple); margin-top: 4px;">●</span>
+            <div>
+              <strong style="font-weight: 600; color: var(--ink);">Speakers, handled:  </strong>
+              <span style="color: var(--ink-soft);"> Confani connects your event with speakers already in our network. Adding your speaker eases future reuse.</span>
+            </div>
+          </li>
+          <li class="flex" style="gap: 0.75rem; align-items: flex-start;">
+            <span style="color: var(--purple); margin-top: 4px;">●</span>
+            <div>
+              <strong style="font-weight: 600; color: var(--ink);">Conflicts, eliminated.</strong>
+              <span style="color: var(--ink-soft);"> Scheduling mistakes that would historically derail events simply can't happen on Confani. </span>
+            </div>
+          </li>
+          <li class="flex" style="gap: 0.75rem; align-items: flex-start;">
+            <span style="color: var(--purple); margin-top: 4px;">●</span>
+            <div>
+              <strong style="font-weight: 600; color: var(--ink);"> Sponsors and partner integration</strong>
+              <span style="color: var(--ink-soft);"> Confani makes your sponsors look like they were thought about first, not last.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- AI Demo Mock -->
+      <div class="ai-demo reveal">
+        <div class="ai-demo-tabs">
+          <span class="ai-demo-tab-dot"></span>
+          <span class="ai-demo-tab-dot"></span>
+          <span class="ai-demo-tab-dot"></span>
+          <span class="ai-demo-tab-label">confani.app/events/new</span>
+        </div>
+
+        <div class="ai-demo-input">
+          <p>"3-day FinTech Regional Summit, June 12–14, 2026, Miami, FL. Day 1 keynote at 9am with Sarah Lopez from Mastercard, then breakouts on payments, lending, and digital ID. Day 2 sponsor exhibition all morning, three panels in afternoon. Day 3 closing fireside with Marcus Chen, then networking lunch.<span class="typing"></span>"</p>
+        </div>
+
+        <div class="ai-demo-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+
+        <div class="ai-demo-output">
+          <div class="ai-demo-output-row">
+            <span class="key">EVENT</span>
+            <span class="val">FinTech Regional Summit 2026</span>
+          </div>
+          <div class="ai-demo-output-row">
+            <span class="key">DATES</span>
+            <span class="val">Jun 12–14, 2026 · Miami Beach, FL</span>
+          </div>
+          <div class="ai-demo-output-row">
+            <span class="key">SESSIONS</span>
+            <span class="val">12 sessions auto-scheduled</span>
+          </div>
+          <div class="ai-demo-output-row">
+            <span class="key">SPEAKERS</span>
+            <span class="val">Sarah Lopez<span class="check">✓</span>, Marcus Chen <em style="opacity:0.7;font-size:0.75rem;">(add email to invite)</em></span>
+          </div>
+          <div class="ai-demo-output-row">
+            <span class="key">ROOMS</span>
+            <span class="val">Auto-allocated, no conflicts</span>
+          </div>
+          <div class="ai-demo-output-row">
+            <span class="key">SPONSORS</span>
+            <span class="val">Day 2 exhibition slot reserved</span>
+          </div>
+          <div style="text-align: right; padding-top: 1rem;">
+            <button class="btn btn-gradient btn-sm" style="padding: 0.5rem 1.25rem;">Review & Publish →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANALYTICS PREVIEW -->
+<section class="section-paper-deep">
+  <div class="container">
+    <div class="feature-split" style="grid-template-columns: 1.2fr 1fr;">
+      <div class="reveal">
+        <!-- Analytics mockup -->
+        <div class="analytics-mock">
+          <div class="analytics-mock-header">
+            <div>
+              <div class="analytics-mock-title">Booth Performance</div>
+              <div class="analytics-mock-sub">FinTech Regional Summit · Day 2</div>
+            </div>
+            <div class="analytics-pill">
+              <span style="width:6px;height:6px;border-radius:50%;background:var(--purple);"></span>
+              Premium
+            </div>
+          </div>
+
+          <div class="analytics-stats">
+            <div class="analytics-stat">
+              <div class="analytics-stat-val">847 <span class="delta">+12%</span></div>
+              <div class="analytics-stat-label">Visitors</div>
+            </div>
+            <div class="analytics-stat">
+              <div class="analytics-stat-val">4:32 <span class="delta">+0:48</span></div>
+              <div class="analytics-stat-label">Avg dwell</div>
+            </div>
+            <div class="analytics-stat">
+              <div class="analytics-stat-val">73 <span class="delta">+18</span></div>
+              <div class="analytics-stat-label">Qualified leads</div>
+            </div>
+          </div>
+
+          <!-- Chart -->
+          <div class="analytics-chart">
+            <div class="analytics-chart-title">Visitors by hour</div>
+            <div class="analytics-chart-sub">Day 2 · 9:00 — 17:00</div>
+            <svg viewBox="0 0 600 180" style="width:100%;height:auto;">
+              <defs>
+                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#0C54FC" stop-opacity="0.4"/>
+                  <stop offset="100%" stop-color="#C420A8" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#0C54FC"/>
+                  <stop offset="50%" stop-color="#6018D8"/>
+                  <stop offset="100%" stop-color="#C420A8"/>
+                </linearGradient>
+              </defs>
+              <!-- grid -->
+              <line x1="0" y1="40" x2="600" y2="40" stroke="rgba(10,14,42,0.06)" stroke-width="1"/>
+              <line x1="0" y1="90" x2="600" y2="90" stroke="rgba(10,14,42,0.06)" stroke-width="1"/>
+              <line x1="0" y1="140" x2="600" y2="140" stroke="rgba(10,14,42,0.06)" stroke-width="1"/>
+              <!-- area -->
+              <path d="M 0,140 L 60,120 L 120,80 L 180,55 L 240,45 L 300,75 L 360,40 L 420,60 L 480,90 L 540,110 L 600,130 L 600,180 L 0,180 Z" fill="url(#chartGrad)"/>
+              <!-- line -->
+              <path d="M 0,140 L 60,120 L 120,80 L 180,55 L 240,45 L 300,75 L 360,40 L 420,60 L 480,90 L 540,110 L 600,130" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- dots -->
+              <circle cx="240" cy="45" r="4" fill="#0C54FC"/>
+              <circle cx="360" cy="40" r="5" fill="#C420A8"/>
+              <text x="370" y="32" font-size="10" font-family="JetBrains Mono" fill="#6018D8">peak 14:00</text>
+              <!-- x labels -->
+              <text x="0" y="172" font-size="9" font-family="JetBrains Mono" fill="#94A3B8">9:00</text>
+              <text x="180" y="172" font-size="9" font-family="JetBrains Mono" fill="#94A3B8">12:00</text>
+              <text x="350" y="172" font-size="9" font-family="JetBrains Mono" fill="#94A3B8">14:00</text>
+              <text x="540" y="172" font-size="9" font-family="JetBrains Mono" fill="#94A3B8">17:00</text>
+            </svg>
+          </div>
+
+          <!-- AI Insight -->
+          <div class="analytics-ai-insight">
+            <div class="analytics-ai-insight-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V18h6v-1.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg>
+            </div>
+            <div class="analytics-ai-insight-content">
+              <div class="analytics-ai-insight-label">AI Insight</div>
+              <div class="analytics-ai-insight-text">Confani has identified a meaningful pattern in today's <a href="#" class="insight-link">booth activity</a> and surfaced specific actions worth taking before the event ends. View the <a href="#" class="insight-link">full breakdown</a> — and recommendations — in your <a href="#" class="insight-link">dashboard</a>.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="section-eyebrow reveal">Revenue Drivers · Actionable Analytics </span>
+        <h2 class="section-title reveal" style="margin-top: 1.5rem;">
+          The first analytics<br/>
+          <em>your CFO will believe.</em>
+        </h2>
+        <p class="lede reveal" style="margin-top: 2rem; max-width: 46ch;">
+          Every action on Confani — every check-in, every connection, every booth visit — feeds an analytics engine that generates auditable, exportable reports created by augmented intelligence. Charts you can build in three taps. Insights with intelligent feedback!
+        </p>
+        <div class="reveal" style="margin-top: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 2rem; font-weight: 500; letter-spacing: -0.02em; background: linear-gradient(95deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">40+</div>
+            <div class="body-sm" style="margin-top: 0.5rem;">Visual Representations </div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 2rem; font-weight: 500; letter-spacing: -0.02em; background: linear-gradient(95deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">90%+</div>
+            <div class="body-sm" style="margin-top: 0.5rem;">Margin on the analytics SKU</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 2rem; font-weight: 500; letter-spacing: -0.02em; background: linear-gradient(95deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">3 taps</div>
+            <div class="body-sm" style="margin-top: 0.5rem;">From raw data to a board-ready visuals </div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 2rem; font-weight: 500; letter-spacing: -0.02em; background: linear-gradient(95deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">YoY</div>
+            <div class="body-sm" style="margin-top: 0.5rem;">Benchmarking across past events</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIX PILLARS -->
+<section class="section-dark">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: end;" class="lg-grid-2">
+      <div>
+        <span class="section-eyebrow eyebrow-light reveal">The platform</span>
+        <h2 class="section-title reveal" style="margin-top: 1.5rem; color: white;">
+          Platform.<br/>
+          <em>Pillars.</em>
+        </h2>
+      </div>
+      <p class="lede reveal" style="color: rgba(255,255,255,0.75); max-width: 50ch;">
+        Confani isn't a feature stack. It's an integrated layer where every capability compounds because they share the same identity and the same data fabric.
+      </p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card reveal">
+        <div class="pillar-num">01</div>
+        <div class="pillar-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <h3 class="pillar-title">AI Event Builder</h3>
+        <p class="body-sm">Tell Confani about your event. Confani builds it. The blank-page problem of event production simply ceases to exist.</p>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-num">02</div>
+        <div class="pillar-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 16l2 2 4-4"/></svg>
+        </div>
+        <h3 class="pillar-title">Event Operations</h3>
+        <p class="body-sm">Full management — everything that used to live in five tools now lives in one.</p>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-num">03</div>
+        <div class="pillar-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3 class="pillar-title">Automated Presence</h3>
+        <p class="body-sm">Confani senses the rhythm of an event in real time — so the right thing happens automatically and the right recommendations are made for driving business metrics.</p>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-num">04</div>
+        <div class="pillar-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </div>
+        <h3 class="pillar-title">Intelligent Matching</h3>
+        <p class="body-sm">Intent-driven AI. Confani identifies every attendees  interests at events and quietly identifies the connections that move careers and close deals.</p>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-num">05</div>
+        <div class="pillar-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </div>
+        <h3 class="pillar-title">Confani Connect</h3>
+        <p class="body-sm">A distribution layer purpose-built for the events ecosystem. Confani unifies existing event platforms that users trust. </p>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-num">06</div>
+        <div class="pillar-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 6-6"/></svg>
+        </div>
+        <h3 class="pillar-title">Outcome Analytics</h3>
+        <p class="body-sm">Premium AI insights - The connections and outcomes that used to vanish into anecdote now produce measurable returns.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY EXPERIENCE -->
+<section>
+  <div class="container">
+    <div style="max-width: 720px;">
+      <span class="section-eyebrow reveal">For organizations</span>
+      <h2 class="section-title reveal" style="margin-top: 1.5rem;">
+        Company<br/>
+        <em> representation intelligently relayed.</em>
+      </h2>
+      <p class="lede reveal" style="margin-top: 2rem;">
+      "Coordinate your team, amplify your presence and finally end the cycle of brilliant conversations that vanish the moment the event ends. Confani turns your company's event presence into compounding institutional memory — the kind your sales team can rely on for years.
+      </p>
+    </div>
+
+    <!-- Phone preview + benefits -->
+    <div class="app-preview-grid">
+      <div class="reveal" style="display: flex; justify-content: center;">
+        <div class="phone-mock">
+          <div class="phone-mock-frame">
+            <div class="phone-mock-screen">
+              <div class="phone-status">
+                <span>9:41</span>
+                <span style="display:flex;gap:4px;align-items:center;font-size:0.65rem;">5G ●●● 100%</span>
+              </div>
+
+              <div class="phone-app-header">
+                <div>
+                  <div style="font-size: 0.7rem; color: var(--ink-faint); font-family: var(--font-mono); letter-spacing: 0.05em;">FINTECH REGIONAL · DAY 2</div>
+                  <div class="phone-app-title">Networking</div>
+                </div>
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));"></div>
+              </div>
+
+              <div class="phone-tabs">
+                <span class="phone-tab active">In your room</span>
+                <span class="phone-tab">All event</span>
+                <span class="phone-tab">Companies</span>
+              </div>
+
+              <div class="phone-section-label">In Room 4 · Lending Panel</div>
+
+              <div class="phone-card company-card">
+                <div class="phone-card-avatar">M</div>
+                <div class="phone-card-content">
+                  <div class="phone-card-name">Morvinn Group</div>
+                  <div class="phone-card-meta">3 reps present · sponsor</div>
+                </div>
+                <span class="phone-card-badge strong">★ Featured</span>
+              </div>
+
+              <div class="phone-card">
+                <div class="phone-card-avatar">SL</div>
+                <div class="phone-card-content">
+                  <div class="phone-card-name">Sarah Lopez</div>
+                  <div class="phone-card-meta">VP Payments · Mastercard</div>
+                </div>
+                <span class="phone-card-badge strong">Strong</span>
+              </div>
+
+              <div class="phone-card">
+                <div class="phone-card-avatar">KD</div>
+                <div class="phone-card-content">
+                  <div class="phone-card-name">Kayla Davis</div>
+                  <div class="phone-card-meta">Founder · LendBox · raising</div>
+                </div>
+                <span class="phone-card-badge strong">Strong</span>
+              </div>
+
+              <div class="phone-card">
+                <div class="phone-card-avatar">AR</div>
+                <div class="phone-card-content">
+                  <div class="phone-card-name">Alex Ramos</div>
+                  <div class="phone-card-meta">Investor · Ventures Fund III</div>
+                </div>
+                <span class="phone-card-badge strong">Strong</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <ul style="display: grid; gap: 2rem;" class="reveal">
+          <li>
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 0.5rem;">Multi-rep representation, done right</h3>
+            <p class="body"> Confani promotes team cordination. Your company shows up unified. Automativaly leave a memorable impression about your brand and your people.</p>
+          </li>
+          <li>
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 0.5rem;">Privacy ordered networking</h3>
+            <p class="body">Dictacte your availability and get focused networking. Attendees see a focused view of who matters most to business objectives and your company's visibility scales as your investment does.</p>
+          </li>
+          <li>
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 0.5rem;">Upstream records</h3>
+            <p class="body">The conversations your reps save today become the context your company relies on tomorrow. Searchable, organized, shareable — building institutional memory.</p>
+          </li>
+          <li>
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 0.5rem;">Intelligently selected visibility at scale </h3>
+            <p class="body">Premium positioning where decisions are being made and meaningful presence inside the moments that matter most. Every interaction tells you something — and every signal sharpens what you do next.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY PARTNER WITH US -->
+<section class="section-dark">
+  <div class="container">
+    <div style="max-width: 720px;">
+      <span class="section-eyebrow eyebrow-light reveal">Why partner with us</span>
+      <h2 class="section-title reveal" style="margin-top: 1.5rem; color: white;">
+        Conferences, partner platforms,<br/>
+        <em>and venues — meet your edge.</em>
+      </h2>
+      <p class="lede reveal" style="margin-top: 2rem; color: rgba(255,255,255,0.85);">
+        We don't compete with you. We make every event you produce more measurable, more memorable and more valuable to the attendees, sponsors and exhibitors you already serve. Confani is the home of the the most forward-thinking conferences and event platforms.
+      </p>
+    </div>
+
+    <div class="companies-flow">
+      <div class="flow-step reveal">
+        <div class="flow-step-num"><span>REASON 01</span></div>
+        <h3 class="flow-step-title">Your attendees expect more.</h3>
+        <p class="body-sm" style="color: rgba(255,255,255,0.7);">Modern professionals don't want a paper badge and a printed agenda — they want intelligent matchmaking, real-time scheduling, and follow-ups that actually happen. Partnering with Confani upgrades the attendee experience without changing your core product.</p>
+      </div>
+      <div class="flow-step reveal">
+        <div class="flow-step-num"><span>REASON 02</span></div>
+        <h3 class="flow-step-title">Your sponsors demand proof.</h3>
+        <p class="body-sm" style="color: rgba(255,255,255,0.7);">Sponsorship dollars are under more scrutiny than ever. Partnered events come with a measurement layer that lets your sponsors quantify booth traffic, lead quality, and engagement — making renewal conversations easy and premium pricing defensible.</p>
+      </div>
+      <div class="flow-step reveal">
+        <div class="flow-step-num"><span>REASON 03</span></div>
+        <h3 class="flow-step-title">Your competitors are watching.</h3>
+        <p class="body-sm" style="color: rgba(255,255,255,0.7);">Confani-enabled events are already setting a new bar for what professional gatherings should feel like. Early partners get exclusive integration tiers, co-marketing visibility, and a permanent advantage in their category before this becomes standard.</p>
+      </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 4rem; font-family: var(--font-editorial); font-style: italic; font-size: 1.25rem; color: rgba(255,255,255,0.85);" class="reveal">
+      Interested in partnering? <a style="color: var(--gradient-glow); text-decoration: underline; cursor: pointer;">Get in touch</a> — we work with a limited number of conferences and platforms each quarter.
+    </p>
+  </div>
+</section>
+
+
+<!-- BIG CTA -->
+<section>
+  <div class="container">
+    <div class="cta-banner">
+      <div class="cta-banner-grid"></div>
+      <div class="cta-banner-content">
+        <span class="section-eyebrow eyebrow-light reveal" style="display: inline-flex; color: var(--gradient-glow);">Get Confani</span>
+        <h2 class="section-title reveal" style="margin-top: 1.5rem; max-width: 22ch; margin-left: auto; margin-right: auto;">
+          Be at the next event<br/>
+          <em>that actually moved your business.</em>
+        </h2>
+        <p class="lede reveal" style="margin-top: 2rem; max-width: 60ch; margin-left: auto; margin-right: auto; color: rgba(255,255,255,0.8);">
+          Join the waitlist as a professional and register your company all for free.<br/><br/>
+          <strong>INDIVIDUALS:</strong><br/>
+          See the most valuable connections before you even approach them and intelligently grow your network on your terms.<br/><br/>
+          <strong>COMPANIES:</strong><br/>
+          Become a Confani Connect partner and host events that utilize our technology. We are not just a software patner — we provide the proof that lets you keep your sponsors, the experience that brings your attendees back and the reputation that you're a technological trailblazer.<br/><br/>
+          <strong>SPEAKERS:</strong><br/>
+          If you're a speaker, Confani turns the moment your talk ends — usually when your audience walks away forever — into the moment your most valuable relationships actually begin, with intelligent matching, intelligent follow-ups and a curated network of every person who heard you and wanted more.<br/><br/>
+          <strong>EVERYONE:</strong><br/>
+          Whatever your role is at the next event — we will maximize your value.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2.5rem;">
+          <button class="btn btn-gradient btn-lg btn-arrow" data-route="signup">
+            Start free
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <button class="btn btn-ghost btn-lg" style="color: white; border: 1px solid rgba(255,255,255,0.2);" data-route="register-company">Register your company</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div><!-- /home page -->
+
+
+<!-- ============================================================
+     SIGNUP PAGE
+     ============================================================ -->
+<div class="page" data-page="signup">
+  <div class="auth-page active">
+    <aside class="auth-side">
+      <div class="auth-side-bg"></div>
+      <div class="auth-side-glow"></div>
+      <div class="auth-side-content">
+        <img src="logo_icon.png" alt="" style="width: 56px; height: 56px; margin-bottom: 2rem;" />
+        <div class="auth-side-eyebrow">Create your account</div>
+        <h2 class="auth-side-title">
+          Where <em>connections</em><br/>
+          <span class="gradient-text">count.</span>
+        </h2>
+        <p class="auth-side-sub">
+          Confani is free for individuals. Import your profile in one tap, or build your profile from scratch.
+        </p>
+      </div>
+      <div class="auth-side-footer">
+        <p class="auth-side-quote">
+          "Confani turned a 5,000-person convention into 47 actual conversations. None of them happened by luck."
+        </p>
+        <p class="auth-side-quote-attr">— Founder, fintech startup · FinTech Regional Summit</p>
+      </div>
+    </aside>
+
+    <div class="auth-form-wrap">
+      <div class="auth-form">
+        <a class="auth-back" data-route="home">← Back home</a>
+
+        <div class="tab-toggle">
+          <button type="button" class="active" data-authtab="individual" onclick="switchAuthTab(this)">Individual</button>
+          <button type="button" data-authtab="company" onclick="switchAuthTab(this)">Company</button>
+        </div>
+
+        <!-- INDIVIDUAL TAB -->
+        <div class="tab-content active" data-tabcontent="individual">
+          <h1 class="auth-title">Sign up — free, forever.</h1>
+          <p class="auth-sub">Bring your LinkedIn profile in one click, or fill it in yourself. Either way, you're networking on Confani in under 2 minutes.</p>
+
+          <button class="linkedin-btn" id="linkedinSignup">
+            <span class="linkedin-icon">in</span>
+            Continue with LinkedIn
+          </button>
+
+          <button class="linkedin-btn" style="margin-bottom: 0;">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A11 11 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
+            Continue with Google
+          </button>
+
+          <div class="divider-or">or sign up with email</div>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="58debaae-73df-4317-a168-6e015bafa825" />
+            <input type="hidden" name="subject" value="New Confani signup — Individual" />
+            <input type="hidden" name="form_type" value="signup_individual" />
+            <input type="hidden" name="redirect" value="/#thanks" />
+            <div class="field-row">
+              <div class="field">
+                <label class="field-label">First name</label>
+                <input name="first_name" class="input" placeholder="Jordan" />
+              </div>
+              <div class="field">
+                <label class="field-label">Last name</label>
+                <input name="last_name" class="input" placeholder="Patel" />
+              </div>
+            </div>
+            <div class="field">
+              <label class="field-label">Work email</label>
+              <input name="work_email" class="input" type="email" placeholder="jordan@company.com" />
+            </div>
+            <div class="field">
+              <label class="field-label">What brings you to Confani?</label>
+              <select name="what_brings_you_to_confani" class="select">
+                <option>I attend professional events regularly</option>
+                <option>I'm speaking at an upcoming event</option>
+                <option>I organize events for my company</option>
+                <option>I'm an investor / advisor</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <button class="btn btn-gradient btn-lg" style="width: 100%; margin-top: 1rem;">
+              Create my Confani account
+            </button>
+
+            <p class="legal-line">
+              By creating an account you agree to our <a>Terms of Service</a>, <a>Privacy Policy</a>, and acknowledge our <a>Data Processing notice</a> for proximity features.
+            </p>
+          </form>
+
+          <p class="auth-meta">
+            Already have an account? <a data-route="login">Sign in</a>
+          </p>
+        </div>
+
+        <!-- COMPANY TAB -->
+        <div class="tab-content" data-tabcontent="company">
+          <h1 class="auth-title">Register your company.</h1>
+          <p class="auth-sub">Set up your organization, add your team, and start hosting or attending events. Pricing is by size — free 30-day trial of full analytics.</p>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="58debaae-73df-4317-a168-6e015bafa825" />
+            <input type="hidden" name="subject" value="New Confani signup — Company (from signup page)" />
+            <input type="hidden" name="form_type" value="signup_company_tab" />
+            <input type="hidden" name="redirect" value="/#thanks" />
+            <div class="field">
+              <label class="field-label">Company name</label>
+              <input name="company_name" class="input" placeholder="Mastercard" />
+            </div>
+            <div class="field">
+              <label class="field-label">Company website</label>
+              <input name="company_website" class="input" placeholder="https://mastercard.com" />
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label class="field-label">Country</label>
+                <select name="country" class="select">
+                  <option>United States</option>
+                  <option>United Kingdom</option>
+                  <option>Canada</option>
+                  <option>Trinidad and Tobago</option>
+                  <option>Mexico</option>
+                  <option>Other...</option>
+                </select>
+              </div>
+              <div class="field">
+                <label class="field-label">Company size</label>
+                <select name="company_size" class="select">
+                  <option>1–10 employees</option>
+                  <option>11–50 employees</option>
+                  <option>51–200 employees</option>
+                  <option>201–500 employees</option>
+                  <option>501–2,000 employees</option>
+                  <option>2,000+ employees</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field-label">Industry</label>
+              <select name="industry" class="select">
+                <option>Financial services</option>
+                <option>Technology / SaaS</option>
+                <option>Healthcare</option>
+                <option>Professional services</option>
+                <option>Energy</option>
+                <option>Education</option>
+                <option>Government / NGO</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field-label">Your role</label>
+              <select name="your_role" class="select">
+                <option>Founder / CEO</option>
+                <option>Marketing / Demand Gen</option>
+                <option>Events / Conferences team</option>
+                <option>Sales / Business Development</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field-label">Work email</label>
+              <input name="work_email" class="input" type="email" placeholder="you@company.com" />
+              <span class="field-hint">We use your email domain to verify your affiliation with the company.</span>
+            </div>
+
+            <button class="btn btn-gradient btn-lg" style="width: 100%; margin-top: 1rem;">
+              Register company →
+            </button>
+
+            <p class="legal-line">
+              By registering, you confirm you have authority to bind this organization. We'll verify your affiliation via your work email and provide a 30-day free trial of the matched tier.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     LOGIN PAGE
+     ============================================================ -->
+<div class="page" data-page="login">
+  <div class="auth-page active">
+    <aside class="auth-side">
+      <div class="auth-side-bg"></div>
+      <div class="auth-side-glow"></div>
+      <div class="auth-side-content">
+        <img src="logo_icon.png" alt="" style="width: 56px; height: 56px; margin-bottom: 2rem;" />
+        <div class="auth-side-eyebrow">Welcome back</div>
+        <h2 class="auth-side-title">
+          The next event<br/>
+          starts <em>now.</em>
+        </h2>
+        <p class="auth-side-sub">
+          Your network, your calendar, your AI-drafted follow-ups, your event analytics — picking up exactly where you left them.
+        </p>
+      </div>
+      <div class="auth-side-footer">
+        <p class="auth-side-quote">
+          "Three days after the conference I had follow-ups going to seventeen new connections — and Confani had drafted every one."
+        </p>
+        <p class="auth-side-quote-attr">— Managing Director, regional VC fund</p>
+      </div>
+    </aside>
+
+    <div class="auth-form-wrap">
+      <div class="auth-form">
+        <a class="auth-back" data-route="home">← Back home</a>
+
+        <div style="background: linear-gradient(95deg, rgba(12, 84, 252, 0.08), rgba(196, 32, 168, 0.08)); border: 1px solid rgba(96, 24, 216, 0.25); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 0.85rem;">
+          <div style="width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; font-size: 0.75rem; font-weight: 700;">i</div>
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--purple); font-weight: 600; margin-bottom: 0.25rem;">Pre-launch · sign-in opens soon</div>
+            <div style="font-size: 0.875rem; line-height: 1.5; color: var(--ink);">Confani is in pre-launch — accounts open shortly. <a data-route="signup" style="color: var(--royal); text-decoration: underline; font-weight: 500;">Sign up now</a> to be notified the moment access opens.</div>
+          </div>
+        </div>
+
+        <h1 class="auth-title">Sign in</h1>
+        <p class="auth-sub">Welcome back. Sign in to continue to Confani.</p>
+
+        <button class="linkedin-btn">
+          <span class="linkedin-icon">in</span>
+          Sign in with LinkedIn
+        </button>
+
+        <button class="linkedin-btn" style="margin-bottom: 0;">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A11 11 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
+          Sign in with Google
+        </button>
+
+        <div class="divider-or">or use your email</div>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="58debaae-73df-4317-a168-6e015bafa825" />
+          <input type="hidden" name="subject" value="Confani login attempt" />
+          <input type="hidden" name="form_type" value="login" />
+          <input type="hidden" name="redirect" value="/#thanks" />
+          <div class="field">
+            <label class="field-label">Email</label>
+            <input name="email" class="input" type="email" placeholder="you@example.com" />
+          </div>
+          <div class="field">
+            <label class="field-label" style="display: flex; justify-content: space-between;">
+              Password
+              <a style="font-size: 0.75rem; font-weight: 400; color: var(--ink-soft); text-decoration: underline;">Forgot?</a>
+            </label>
+            <input name="password_attempt" class="input" type="text" placeholder="••••••••" />
+          </div>
+          <button type="submit" class="btn btn-gradient btn-lg" style="width: 100%; margin-top: 0.5rem;">
+            Sign in
+          </button>
+        </form>
+
+        <p class="auth-meta">
+          New here? <a data-route="signup">Create an account</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     FOR ORGANIZATIONS PAGE
+     ============================================================ -->
+<div class="page" data-page="for-organizations">
+  <section class="hero" style="min-height: 70vh; padding: 8rem 0 5rem;">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-spotlight" style="top: 20%; left: 70%;"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-tag">
+        <span class="pulse"></span>
+        <span>For organizations</span>
+      </div>
+      <h1 class="hero-title hero-headline" style="max-width: 22ch;">
+        <span class="reveal-line"><span>Run the event.</span></span>
+        <span class="reveal-line"><span><em>Prove the value.</em></span></span>
+        <span class="reveal-line"><span class="gradient-text">Build the memory.</span></span>
+      </h1>
+      <p class="hero-sub" style="max-width: 62ch;">
+        Confani is the first platform engineered for the way modern companies actually engage with events — multi-rep representation, organized notes, paid visibility, ad placements, and AI-powered analytics that prove the spend.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-gradient btn-lg btn-arrow" data-route="register-company">
+          Register your company
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <button class="btn btn-ghost btn-lg" data-route="pricing" style="color: white; border: 1px solid rgba(255,255,255,0.2);">
+          See pricing
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="section-paper">
+    <div class="container">
+      <div style="max-width: 720px;">
+        <span class="section-eyebrow reveal">What organizations actually do on Confani</span>
+        <h2 class="section-title reveal" style="margin-top: 1.5rem;">
+          Not just a tool.<br/>
+          <em>An operating layer.</em>
+        </h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 4rem; margin-top: 5rem;">
+        <!-- Use case row 1 -->
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;" class="reveal">
+          <div style="grid-column: 1; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(10,14,42,0.1);">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--ink-faint); margin-bottom: 1rem;">01 — HOSTING</div>
+            <h3 style="font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 500; letter-spacing: -0.02em; margin-bottom: 1rem;">Build the entire event in a paragraph.</h3>
+            <p class="body-lg" style="max-width: 64ch;">Type or speak the description. AI parses speakers, sessions, time slots, room assignments, sponsor blocks. Speakers are auto-matched against existing profiles or invitations are drafted. Review side-by-side, edit inline, publish.</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;" class="reveal">
+          <div style="grid-column: 1; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(10,14,42,0.1);">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--ink-faint); margin-bottom: 1rem;">02 — ATTENDING</div>
+            <h3 style="font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 500; letter-spacing: -0.02em; margin-bottom: 1rem;">Multi-rep representation, done right.</h3>
+            <p class="body-lg" style="max-width: 64ch;">Add as many representatives as you need with one click — like LinkedIn but for the event itself. The company appears once in the networking tab; each rep appears as themselves. Pay for "Featured" placement at the top of the list.</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;" class="reveal">
+          <div style="grid-column: 1; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(10,14,42,0.1);">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--ink-faint); margin-bottom: 1rem;">03 — REMEMBERING</div>
+            <h3 style="font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 500; letter-spacing: -0.02em; margin-bottom: 1rem;">Notes that flow upstream — automatically.</h3>
+            <p class="body-lg" style="max-width: 64ch;">Reps log notes during and 72 hours after the event. Notes route to the company's event history — searchable, organized by event, owned by the company. Two years later, when a sales rep meets a contact again, the institutional memory is right there.</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;" class="reveal">
+          <div style="grid-column: 1; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(10,14,42,0.1);">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--ink-faint); margin-bottom: 1rem;">04 — MONETIZING</div>
+            <h3 style="font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 500; letter-spacing: -0.02em; margin-bottom: 1rem;">Sponsored visibility & in-session ads.</h3>
+            <p class="body-lg" style="max-width: 64ch;">Pay for top placement in the networking tab — clearly labeled "Featured" for trust. Buy ad slots within session detail pages to reach the most engaged audience. Every click and every visit feeds your lead-quality dashboard.</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;" class="reveal">
+          <div style="grid-column: 1;">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--ink-faint); margin-bottom: 1rem;">05 — PROVING</div>
+            <h3 style="font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 500; letter-spacing: -0.02em; margin-bottom: 1rem;">Analytics with AI insights — auditable.</h3>
+            <p class="body-lg" style="max-width: 64ch;">Pick a chart from 40+ templates. Filter by date, segment, event. The AI writes a narrative summary in your language — what changed, who showed up, what worked. Export to PDF for the board, or to your CRM for sales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard preview -->
+  <section>
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 4rem;">
+        <span class="section-eyebrow reveal" style="display: inline-flex;">A glimpse of the dashboard</span>
+        <h2 class="section-title reveal" style="margin-top: 1.5rem;">
+          Generate any chart<br/>
+          <em>in three taps.</em>
+        </h2>
+      </div>
+
+      <div class="dash-preview reveal">
+        <div class="dash-side">
+          <div class="dash-side-item active">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Overview
+          </div>
+          <div class="dash-side-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Events
+          </div>
+          <div class="dash-side-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 6-6"/></svg>
+            Analytics
+          </div>
+          <div class="dash-side-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+            Team
+          </div>
+          <div class="dash-side-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Notes
+          </div>
+          <div class="dash-side-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4h20v16H2z"/><path d="M2 8h20"/></svg>
+            Billing
+          </div>
+        </div>
+
+        <div class="analytics-mock" style="box-shadow: none; border: 1px solid rgba(10,14,42,0.06); padding: 1.5rem;">
+          <div class="analytics-mock-header">
+            <div>
+              <div class="analytics-mock-title">Audience Composition</div>
+              <div class="analytics-mock-sub">FinTech Regional Summit · all 3 days</div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <select class="select" style="font-size: 0.75rem; padding: 0.4rem 0.75rem; max-width: 160px;">
+                <option>By industry</option>
+                <option>By role / seniority</option>
+                <option>By company size</option>
+                <option>By geography</option>
+              </select>
+              <button class="btn btn-outline btn-sm" style="padding: 0.4rem 0.85rem; font-size: 0.75rem;">Export</button>
+            </div>
+          </div>
+
+          <!-- Donut chart -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+            <div>
+              <svg viewBox="0 0 200 200" style="width: 100%; max-width: 240px; margin: 0 auto; display: block;">
+                <defs>
+                  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0C54FC"/><stop offset="100%" stop-color="#24C0FC"/></linearGradient>
+                  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6018D8"/><stop offset="100%" stop-color="#8424F0"/></linearGradient>
+                  <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C420A8"/><stop offset="100%" stop-color="#E440D8"/></linearGradient>
+                  <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#94A3B8"/></linearGradient>
+                </defs>
+                <!-- 4 segments: 35, 28, 22, 15 percent -->
+                <circle r="64" cx="100" cy="100" fill="none" stroke="url(#g1)" stroke-width="32" stroke-dasharray="140.7 401.9" transform="rotate(-90 100 100)"/>
+                <circle r="64" cx="100" cy="100" fill="none" stroke="url(#g2)" stroke-width="32" stroke-dasharray="112.6 401.9" stroke-dashoffset="-140.7" transform="rotate(-90 100 100)"/>
+                <circle r="64" cx="100" cy="100" fill="none" stroke="url(#g3)" stroke-width="32" stroke-dasharray="88.4 401.9" stroke-dashoffset="-253.3" transform="rotate(-90 100 100)"/>
+                <circle r="64" cx="100" cy="100" fill="none" stroke="url(#g4)" stroke-width="32" stroke-dasharray="60.3 401.9" stroke-dashoffset="-341.7" transform="rotate(-90 100 100)"/>
+                <text x="100" y="98" text-anchor="middle" font-family="Fraunces" font-size="22" font-weight="500" fill="#0A0E2A">847</text>
+                <text x="100" y="115" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#94A3B8">attendees</text>
+              </svg>
+            </div>
+            <div>
+              <div style="display: grid; gap: 0.85rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+                  <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <span style="width: 10px; height: 10px; border-radius: 2px; background: linear-gradient(135deg, #0C54FC, #24C0FC);"></span>
+                    <span style="font-size: 0.875rem;">Financial services</span>
+                  </div>
+                  <span style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 600;">35%</span>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+                  <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <span style="width: 10px; height: 10px; border-radius: 2px; background: linear-gradient(135deg, #6018D8, #8424F0);"></span>
+                    <span style="font-size: 0.875rem;">Technology / SaaS</span>
+                  </div>
+                  <span style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 600;">28%</span>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+                  <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <span style="width: 10px; height: 10px; border-radius: 2px; background: linear-gradient(135deg, #C420A8, #E440D8);"></span>
+                    <span style="font-size: 0.875rem;">Investment / VC</span>
+                  </div>
+                  <span style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 600;">22%</span>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+                  <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <span style="width: 10px; height: 10px; border-radius: 2px; background: linear-gradient(135deg, #475569, #94A3B8);"></span>
+                    <span style="font-size: 0.875rem;">Other</span>
+                  </div>
+                  <span style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 600;">15%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="analytics-ai-insight" style="margin-top: 2rem;">
+            <div class="analytics-ai-insight-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V18h6v-1.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg>
+            </div>
+            <div class="analytics-ai-insight-content">
+              <div class="analytics-ai-insight-label">AI Insight</div>
+              <div class="analytics-ai-insight-text">Your audience is heavily weighted toward Financial Services (35%) and Technology (28%) — a strong investor-startup overlap. Compared to last year's event, the Investment & VC share grew by <strong>+9pp</strong>, suggesting your speaker lineup successfully attracted capital deployers. Consider sponsoring a dedicated investor track for next year.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ============================================================
+     SIMPLE OTHER PAGES (placeholder content for now)
+     ============================================================ -->
+<div class="page" data-page="for-attendees">
+  <section class="hero" style="min-height: 70vh; padding: 8rem 0 5rem;">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-spotlight" style="top: 30%; left: 30%;"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-tag">
+        <span class="pulse"></span>
+        <span>For professionals</span>
+      </div>
+      <h1 class="hero-title hero-headline" style="max-width: 24ch;">
+        <span class="reveal-line"><span>Stop missing</span></span>
+        <span class="reveal-line"><span><em>the right person</em></span></span>
+        <span class="reveal-line"><span class="gradient-text">two rooms over.</span></span>
+      </h1>
+      <p class="hero-sub" style="max-width: 60ch;">
+        Confani is free for individuals and organizations. Bring your LinkedIn profile in one tap and walk into your next event with the right introductions already lined up.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-gradient btn-lg btn-arrow" data-route="signup">Sign up free</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="page" data-page="product">
+  <section class="hero" style="min-height: 50vh; padding: 8rem 0 5rem;">
+    <div class="hero-bg"><div class="hero-grid"></div></div>
+    <div class="hero-inner">
+      <div class="hero-tag"><span class="pulse"></span><span>Product overview</span></div>
+      <h1 class="hero-title hero-headline" style="max-width: 22ch;">
+        <span class="reveal-line"><span>One platform.</span></span>
+        <span class="reveal-line"><span><em>Four stakeholders.</em></span></span>
+        <span class="reveal-line"><span class="gradient-text">Six pillars.</span></span>
+      </h1>
+      <p class="hero-sub" style="max-width: 60ch;">A short tour of what makes Confani the operating system for professional events — head over to <a data-route="for-organizations" style="color: white; text-decoration: underline;">organizations</a> or <a data-route="for-attendees" style="color: white; text-decoration: underline;">professionals</a> for the deeper view.</p>
+    </div>
+  </section>
+</div>
+<!-- ============================================================
+     Pricing Page
+     ============================================================ -->
+<div class="page" data-page="pricing">
+  <section class="section-paper" style="padding-top: 9rem;">
+    <div class="container text-center">
+      <span class="section-eyebrow" style="display: inline-flex;">Pricing</span>
+      <h1 class="hero-headline" style="font-size: clamp(3rem, 6vw, 5rem); margin-top: 1.5rem; max-width: 22ch; margin-left: auto; margin-right: auto;">
+        Free for professionals and organizations.<br/>
+        <em class="gradient-text">Enterprise analytics</em> tier pricing.
+      </h1>
+      <p class="lede" style="margin-top: 2rem; max-width: 60ch; margin-left: auto; margin-right: auto;">
+      Individuals and organizations join for free. Inteligent analytics are available for speakers and organizations. Analytics tierred pricing listed below committment cancel anytime. Prove the value of what you fund.
+      </p>
+
+      <div class="pricing-toggle reveal" id="pricingToggle">
+        <button type="button" class="active" data-billing="monthly" onclick="togglePricing(this)">Monthly</button>
+        <button type="button" data-billing="annual" onclick="togglePricing(this)">Annual <span class="pricing-savings">Save 20%</span></button>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 5rem;">
+      <div style="max-width: 720px; margin: 0 auto 2.5rem; text-align: center;">
+        <span class="section-eyebrow" style="display: inline-flex;">For Individuals</span>
+        <h2 style="font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 500; letter-spacing: -0.02em; margin-top: 1rem; line-height: 1.15;">
+          Always free to attend. <em style="font-family: var(--font-editorial);">Optional premium feedback for speakers.</em>
+        </h2>
+      </div>
+
+      <div class="pricing-grid" style="max-width: 720px; margin: 0 auto; grid-template-columns: 1fr 1fr;">
+        <div class="pricing-card reveal">
+          <div class="pricing-tier">FREE</div>
+          <div class="pricing-name">Professional</div>
+          <p class="pricing-desc">Every attendee. Always free. Full networking, intelligent matching, smart follow-ups.</p>
+          <div class="pricing-price"><span class="currency">$</span>0</div>
+          <p class="pricing-note">For individuals — forever.</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature"><span class="check">✓</span><span>Profile, calendar, network, messaging</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Smart conversation starters</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Automated follow-up drafts</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Attend any Confani event</span></li>
+          </ul>
+          <button class="btn btn-outline" data-route="signup">Sign up free</button>
+        </div>
+
+        <div class="pricing-card featured reveal">
+          <div class="pricing-tier">SPEAKER · NEW</div>
+          <div class="pricing-name">Speaker Pro</div>
+          <p class="pricing-desc">For professional speakers who want their stage time to compound into a measurable, lasting audience.</p>
+          <div class="pricing-price">
+            <span class="currency">$</span><span class="price-amount" data-monthly="19" data-annual="15">19</span>
+            <span class="period">/ mo</span>
+          </div>
+          <p class="pricing-note">Per speaker. Annual: $182/yr.</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature"><span class="check">✓</span><span>Everything in Professional</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Audience analytics for every talk you give</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Insight into who engaged, and how</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Year-over-year tracking of your speaking impact</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Customizable session presence — your bio, your links, your story</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Verified Speaker badge</span></li>
+          </ul>
+          <button class="btn btn-primary" data-route="signup">Become a Speaker Pro</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 6rem;">
+      <div style="max-width: 720px; margin: 0 auto 2.5rem; text-align: center;">
+        <span class="section-eyebrow" style="display: inline-flex;">For Organizations</span>
+        <h2 style="font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 500; letter-spacing: -0.02em; margin-top: 1rem; line-height: 1.15;">
+          Always free to register. <em style="font-family: var(--font-editorial);">Tiered analytics by company size.</em>
+        </h2>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
+          <div class="pricing-tier">FREE</div>
+          <div class="pricing-name">Starter</div>
+          <p class="pricing-desc">Register your company, host or attend events, coordinate your team.</p>
+          <div class="pricing-price"><span class="currency">$</span>0</div>
+          <p class="pricing-note">For organizations of any size — forever.</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature"><span class="check">✓</span><span>Company profile and event calendar</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Host or attend unlimited events</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Up to 5 organizers</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Team coordination & note-taking</span></li>
+          </ul>
+          <button class="btn btn-outline" data-route="register-company">Register company</button>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div class="pricing-tier">SMALL</div>
+          <div class="pricing-name">Small Org</div>
+          <p class="pricing-desc">Premium analytics for organizations under 50 employees.</p>
+          <div class="pricing-price">
+            <span class="currency">$</span><span class="price-amount" data-monthly="299" data-annual="239">299</span>
+            <span class="period">/ mo</span>
+          </div>
+          <p class="pricing-note">Per organization. Annual: $2,870/yr.</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature"><span class="check">✓</span><span>Everything in Starter</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Up to 10 organizers</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Core analytics dashboard</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Insight summaries</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Export to CSV / PDF</span></li>
+          </ul>
+          <button class="btn btn-outline" data-route="register-company">Register company</button>
+        </div>
+
+        <div class="pricing-card featured reveal">
+          <div class="pricing-tier">GROWTH · MOST POPULAR</div>
+          <div class="pricing-name">Mid-Market</div>
+          <p class="pricing-desc">Full analytics depth for organizations 50–500 employees.</p>
+          <div class="pricing-price">
+            <span class="currency">$</span><span class="price-amount" data-monthly="999" data-annual="799">999</span>
+            <span class="period">/ mo</span>
+          </div>
+          <p class="pricing-note">Per organization. Annual: $9,590/yr.</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature"><span class="check">✓</span><span>Everything in Small Org</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Up to 50 organizers</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Full analytics suite</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Sponsor ROI add-on access</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Year-over-year benchmarking</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Priority support · 24-hour SLA</span></li>
+          </ul>
+          <button class="btn btn-primary" data-route="register-company">Register company</button>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div class="pricing-tier">ENTERPRISE</div>
+          <div class="pricing-name">Enterprise</div>
+          <p class="pricing-desc">For organizations 500+ employees with multi-region, API, and SSO needs.</p>
+          <div class="pricing-price">Custom</div>
+          <p class="pricing-note">Annual contract. Custom DPA available.</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature"><span class="check">✓</span><span>Everything in Mid-Market</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Unlimited organizers</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>API + SSO + dedicated infrastructure</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Data residency options</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>SOC 2 Type II report</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Named CSM · 4-hour SLA</span></li>
+            <li class="pricing-feature"><span class="check">✓</span><span>Custom DPA & legal terms</span></li>
+          </ul>
+          <button class="btn btn-outline">Contact sales</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<div class="page" data-page="company">
+  <section class="hero" style="min-height: 60vh; padding: 8rem 0 5rem;">
+    <div class="hero-bg"><div class="hero-grid"></div></div>
+    <div class="hero-inner">
+      <div class="hero-tag"><span class="pulse"></span><span>Company</span></div>
+      <h1 class="hero-title hero-headline" style="max-width: 20ch;">
+        <span class="reveal-line"><span>Originated</span></span>
+        <span class="reveal-line"><span><em>in our region.</em></span></span>
+        <span class="reveal-line"><span class="gradient-text">Built for the world.</span></span>
+      </h1>
+      <p class="hero-sub" style="max-width: 60ch;">Confani is engineered as a category-creating platform for the professional events industry. Built where professional networking matters most — in the rooms where careers and companies are made.</p>
+    </div>
+  </section>
+</div>
+
+<div class="page" data-page="register-company">
+  <div class="auth-page active">
+    <aside class="auth-side">
+      <div class="auth-side-bg"></div>
+      <div class="auth-side-glow"></div>
+      <div class="auth-side-content">
+        <img src="logo_icon.png" alt="" style="width: 56px; height: 56px; margin-bottom: 2rem;" />
+        <div class="auth-side-eyebrow">Register your company</div>
+        <h2 class="auth-side-title">
+          Run events. <em>Attend events.</em><br/>
+          <span class="gradient-text">Prove the value.</span>
+        </h2>
+        <p class="auth-side-sub">
+          Set up your organization, designate event representatives, host or attend events, and access the analytics that justify the spend.
+        </p>
+      </div>
+      <div class="auth-side-footer">
+        <p class="auth-side-quote">"Within 60 days of switching to Confani, our event ROI report went from a paragraph to a 14-page narrative our CFO actually read."</p>
+        <p class="auth-side-quote-attr">— Director of Marketing, mid-market SaaS</p>
+      </div>
+    </aside>
+
+    <div class="auth-form-wrap">
+      <div class="auth-form">
+        <a class="auth-back" data-route="home">← Back home</a>
+        <h1 class="auth-title">Register your company.</h1>
+        <p class="auth-sub">30-day free trial of full analytics. No credit card required.</p>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="58debaae-73df-4317-a168-6e015bafa825" />
+          <input type="hidden" name="subject" value="New Confani company registration" />
+          <input type="hidden" name="form_type" value="register_company_a" />
+            <input type="hidden" name="redirect" value="/#thanks" />
+          <div class="field">
+            <label class="field-label">Company name</label>
+            <input name="company_name" class="input" placeholder="Mastercard" />
+          </div>
+          <div class="field">
+            <label class="field-label">Company website</label>
+            <input name="company_website" class="input" placeholder="https://mastercard.com" />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">Country</label>
+              <select name="country" class="select">
+                  <option>United States</option>
+                  <option>United Kingdom</option>
+                  <option>Canada</option>
+                  <option>Trinidad and Tobago</option>
+                  <option>Mexico</option>
+                  <option>Other...</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field-label">Company size</label>
+              <select name="company_size" class="select">
+                <option>1–10 employees</option>
+                <option>11–50 employees</option>
+                <option>51–200 employees</option>
+                <option>201–500 employees</option>
+                <option>501–2,000 employees</option>
+                <option>2,000+ employees</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">Industry</label>
+            <select name="industry" class="select">
+              <option>Financial services</option>
+              <option>Technology / SaaS</option>
+              <option>Healthcare</option>
+              <option>Professional services</option>
+              <option>Energy</option>
+              <option>Education</option>
+              <option>Government / NGO</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label">Your role</label>
+            <select name="your_role" class="select">
+              <option>Founder / CEO</option>
+              <option>Marketing / Demand Gen</option>
+              <option>Events / Conferences team</option>
+              <option>Sales / Business Development</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label">Work email</label>
+            <input name="work_email" class="input" type="email" placeholder="you@company.com" />
+            <span class="field-hint">We use your email domain to verify your affiliation with the company.</span>
+          </div>
+
+          <button class="btn btn-gradient btn-lg" style="width: 100%; margin-top: 1rem;">
+            Register company →
+          </button>
+
+          <p class="legal-line">
+            By registering, you confirm you have authority to bind this organization. We'll verify your affiliation via your work email and provide a 30-day free trial of the matched tier.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- data page -->
+<div class="page" data-page="register-company">
+  <div class="auth-page active">
+    <aside class="auth-side">
+      <div class="auth-side-bg"></div>
+      <div class="auth-side-glow"></div>
+      <div class="auth-side-content">
+        <img src="logo_icon.png" alt="" style="width: 56px; height: 56px; margin-bottom: 2rem;" />
+        <div class="auth-side-eyebrow">Register your company</div>
+        <h2 class="auth-side-title">
+          Run events. <em>Attend events.</em><br/>
+          <span class="gradient-text">Prove the value.</span>
+        </h2>
+        <p class="auth-side-sub">
+          Set up your organization, designate event representatives, host or attend events, and access the analytics that justify the spend.
+        </p>
+      </div>
+      <div class="auth-side-footer">
+        <p class="auth-side-quote">"Within 60 days of switching to Confani, our event ROI report went from a paragraph to a 14-page narrative our CFO actually read."</p>
+        <p class="auth-side-quote-attr">— Director of Marketing, mid-market SaaS</p>
+      </div>
+    </aside>
+
+    <div class="auth-form-wrap">
+      <div class="auth-form">
+        <a class="auth-back" data-route="home">← Back home</a>
+        <h1 class="auth-title">Register your company.</h1>
+        <p class="auth-sub">30-day free trial of full analytics. No credit card required.</p>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="58debaae-73df-4317-a168-6e015bafa825" />
+          <input type="hidden" name="subject" value="New Confani company registration" />
+          <input type="hidden" name="form_type" value="register_company_b" />
+            <input type="hidden" name="redirect" value="/#thanks" />
+          <div class="field">
+            <label class="field-label">Company name</label>
+            <input name="company_name" class="input" placeholder="Mastercard" />
+          </div>
+          <div class="field">
+            <label class="field-label">Company website</label>
+            <input name="company_website" class="input" placeholder="https://mastercard.com" />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">Country</label>
+              <select name="country" class="select">
+                  <option>United States</option>
+                  <option>United Kingdom</option>
+                  <option>Canada</option>
+                  <option>Trinidad and Tobago</option>
+                  <option>Mexico</option>
+                  <option>Other...</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field-label">Company size</label>
+              <select name="company_size" class="select">
+                <option>1–10 employees</option>
+                <option>11–50 employees</option>
+                <option>51–200 employees</option>
+                <option>201–500 employees</option>
+                <option>501–2,000 employees</option>
+                <option>2,000+ employees</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">Industry</label>
+            <select name="industry" class="select">
+              <option>Financial services</option>
+              <option>Technology / SaaS</option>
+              <option>Healthcare</option>
+              <option>Professional services</option>
+              <option>Energy</option>
+              <option>Education</option>
+              <option>Government / NGO</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label">Your role</label>
+            <select name="your_role" class="select">
+              <option>Founder / CEO</option>
+              <option>Marketing / Demand Gen</option>
+              <option>Events / Conferences team</option>
+              <option>Sales / Business Development</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label">Work email</label>
+            <input name="work_email" class="input" type="email" placeholder="you@company.com" />
+            <span class="field-hint">We use your email domain to verify your affiliation with the company.</span>
+          </div>
+
+          <button class="btn btn-gradient btn-lg" style="width: 100%; margin-top: 1rem;">
+            Register company →
+          </button>
+
+          <p class="legal-line">
+            By registering, you confirm you have authority to bind this organization. We'll verify your affiliation via your work email and provide a 30-day free trial of the matched tier.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     THANK YOU PAGE — shown after Formspree submissions
+     ============================================================ -->
+<div class="page" data-page="thanks">
+  <section class="hero" style="min-height: 100vh; display: flex; align-items: center;">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-spotlight" style="top: 50%; left: 50%;"></div>
+    </div>
+    <div class="hero-inner" style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <div class="hero-tag" style="margin: 0 auto 2.5rem;">
+        <span class="pulse"></span>
+        <span>You're on the list</span>
+      </div>
+
+      <h1 class="hero-title hero-headline" style="max-width: 18ch; margin: 0 auto;">
+        <span class="reveal-line"><span>Welcome to</span></span>
+        <span class="reveal-line"><span class="gradient-text">Confani.</span></span>
+      </h1>
+
+      <p class="hero-sub" style="margin: 2rem auto 0; max-width: 56ch;">
+        Thank you for joining us at the start. Confani is in pre-launch — we're putting the finishing touches on the platform before we open the doors. We'll email you the moment your access is ready, along with everything you need to get the most out of your first event.
+      </p>
+
+      <p style="font-family: var(--font-editorial); font-style: italic; font-size: 1.125rem; color: rgba(255,255,255,0.65); margin-top: 2.5rem; max-width: 50ch; margin-left: auto; margin-right: auto;">
+        In the meantime, keep an eye on your inbox. Big things ahead.
+      </p>
+
+      <div style="margin-top: 4rem;">
+        <button class="btn btn-gradient btn-lg btn-arrow" data-route="home">
+          Back to home
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <p style="margin-top: 3rem; font-size: 0.875rem; color: rgba(255,255,255,0.5);">
+        Have a question while you wait? Email <a href="mailto:hello@confani.com" style="color: var(--gradient-glow); text-decoration: underline;">hello@confani.com</a>
+      </p>
+    </div>
+  </section>
+</div>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="footer-brand-mark"></div>
+          <div class="footer-brand-name">Confani</div>
+        </div>
+        <p class="footer-tag">Where connections count. The operating system for professional events.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a data-route="for-organizations">For organizations</a></li>
+          <li><a data-route="for-attendees">For professionals</a></li>
+          <li><a data-route="pricing">Pricing</a></li>
+          <li><a>Confani Connect (partners)</a></li>
+          <li><a>Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a data-route="company">About</a></li>
+          <li><a>Careers</a></li>
+          <li><a>Press</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a>Help Center</a></li>
+          <li><a>Developer docs</a></li>
+          <li><a>Status</a></li>
+          <li><a>Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a>Privacy Policy</a></li>
+          <li><a>Terms of Service</a></li>
+          <li><a>Acceptable Use</a></li>
+          <li><a>Cookies</a></li>
+          <li><a>Your privacy rights (GDPR / CCPA)</a></li>
+          <li><a>Do not sell or share my data</a></li>
+          <li><a>Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Confani. All rights reserved.</span>
+      <div class="footer-legal">
+        <a>Status</a>
+        <a>Security</a>
+        <a>Trust Center</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
